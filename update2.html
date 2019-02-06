@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Featured_Update</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Menyisipkan Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="gaya.css">
+    <script>
+         $(document).ready(function(){
+            $('#gbr1').hide();
+            $('#gbr2').hide();
+            $('#gbr3').hide();
+            $('#gbr4').hide();
+            $("#tombol").click(function(){
+                var dany = $('#id').val();
+                if ( dany == "kode1"){
+                    $('#gbr1').show(1000);
+                    $('#gbr2').hide('#gbr2');
+                    $('#gbr3').hide('#gbr3');
+                    $('#gbr4').hide('#gbr4');
+                    
+                }else if( dany == "kode2"){
+                    $('#gbr1').hide('#gbr1');
+                    $('#gbr3').hide('#gbr3');
+                    $('#gbr4').hide('#gbr4');
+                    $('#gbr2').show(1000);
+                    
+                }else if( dany == "kode3"){
+                    $('#gbr1').hide('#gbr1');
+                    $('#gbr2').hide('#gbr2');
+                    $('#gbr4').hide('#gbr4');
+                    $('#gbr3').show(1000);
+                    
+                }else if( dany == "kode4"){
+                    $('#gbr1').hide('#gbr1');
+                    $('#gbr2').hide('#gbr2');
+                    $('#gbr3').hide('#gbr3');
+                    $('#gbr4').show(1000);
+                    
+                }else if( dany == ""){
+                    alert("harap isi CAMPAIGN");
+                }else {alert("harap isi CAMPAIGN yang sesuai")}               
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Membuat komponen jubotron sebagai header -->
+    <header>
+        <img src="Capture.png" id="camp">
+        <div class="jumbotron jumbotron-fluid" style="background-color: white">
+            <div class="container">
+                <h2>Campaign</h2>
+                <div class="row">
+                    <div class="col">
+                         <div class="input">
+                            <input type="id"required id="id" placeholder="Lihat Di Tabel">
+                            <span class="text">Update Id</span>
+                            <button id="tombol" type="submit">cari</button>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                
+                
+                <div class="row2">
+                     <div class="input" >
+                            <div id="gbr1">
+                                <img src="image1.png">
+                            </div>
+                            <div id="gbr2">
+                                <img src="image2.png">
+                            </div>
+                            <div id="gbr3">
+                                <img src="image3.png">
+                            </div>
+                            <div id="gbr4">
+                                <img src="image4.png">
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="row3">
+                         <div class="kirim">
+                            <input type="submit" name="submit" id="submit">
+                        </div>
+                    </div>
+                    <div class="row4">
+                        <div class="status2">
+                                <table id="tbl" class="table">
+                                    <tr class="atas">
+                                        <th>Hastag</th>
+                                        <th>Des</th>
+                                        <th>Title</th>
+                                        <th>edit</th>
+                                        <th>Update_id</th>       
+                                        <th>delete</th>
+                                    </tr>
+                                  <tr>
+                                    <td clssass="field1s">#AkuTemanmu</td>
+                                    <td class="field2s">Kita Beda Tapi Tetap Satu Indonesia!</td>
+                                    <td class="field3s">Sampai Berjumpa, Arek-arek Suroboyo!</td>
+                                    <td class="field4s">kode1</td>
+                                    <td><button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary">Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger">Cancel</button></td>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)">Delete</button></td> 
+                                  </tr>
+
+                                    <tr>
+                                    <td class="field1s">#SDGPIPE</td>
+                                    <td class="field2s">Ayo Pemuda Indonesia jadi Penggerak <br> Perubahan untuk Pencapaian Tujuan Pembangunan <br> Berkelanjutan!</td>
+                                    <td class="field3s">Terima kasih Filantropi Indonesia </td>
+                                    <td class="field4s">kode2</td>
+                                    <td><button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary">Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger">Cancel</button></td>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)" >Delete</button></td> 
+                                 </tr>
+  
+                                    <tr>
+                                    <td class="field1s">#AkuDewasa</td>
+                                    <td class="field2s">Meningkatkan Pengetahuan Remaja terkait <br> Kesehatan Seksual dan Reproduksi</td>
+                                    <td class="field3s">Puncak Kegiatan '#AkuDewasa, Aku Tanggung Jawab</td>
+                                    <td class="field4s">kode3</td>
+                                    <td>
+                                    <button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary" >Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger" >Cancel</button>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)">Delete</button></td> 
+                                    </td>
+                                    </tr>
+
+                                    <tr>
+                                    <td class="field1s">#AkuDewasa</td>
+                                    <td class="field2s">Meningkatkan Pengetahuan Remaja terkait <br> Kesehatan Seksual dan Reproduksi</td>
+                                    <td class="field3s">Puncak Kegiatan '#AkuDewasa, Aku Tanggung Jawab</td>
+                                    <td class="field4s">kode3</td>
+                                    <td>
+                                    <button type="button" id="edit" class="edit btn btn-success">Edit</button>
+                                    <button type="button" id="edit" style="display:none" class="save btn btn-primary" >Save</button>
+                                    <button type="button" id="edit" style="display:none" class="cancel btn btn-danger" >Cancel</button>
+                                    <td><button class="delete" value="Delete" onclick="deleteRow(this)">Delete</button></td> 
+                                    </td>
+                                    </tr>    
+                            </table>
+                        </div>  
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+    $('#tbl').find('.save, .cancel').hide();
+    $('#tbl').on('click', '.edit', function(){
+    $('#tbl').find('.save, .cancel').hide();
+    $('#tbl').find('.edit').show();
+    $('*').prop('contenteditable', false)
+    $(this).hide().siblings('.save, .cancel').show();
+      currentTD = $(this).closest('td').siblings()
+      $.each(currentTD, function () {
+            $(this).attr("initialval", $(this).text())
+          $(this).prop('contenteditable', true)
+      });
+});
+
+$('#tbl').on('click', '.save', function() {
+    var $btn = $(this);
+    $('#tbl').find('.save, .cancel').hide();
+    $btn.hide().siblings('.edit').show();
+    currentTD = $(this).closest('td').siblings()
+    $.each(currentTD, function () {
+        $(this).prop('contenteditable', false)
+    });
+});
+
+$('#tbl').on('click', '.cancel', function() {
+    var $btn = $(this);
+    $('#tbl').find('.save, .cancel').hide();
+    $btn.hide().siblings('.edit').show();
+    currentTD = $(this).closest('td').siblings()
+    $.each(currentTD, function () {        
+        $(this).text($(this).attr("initialval"));
+        $(this).prop('contenteditable', false)
+    });
+});
+</script>
+    <script>
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menyisipkan JQuery dan Javascript Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
